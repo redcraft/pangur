@@ -1,0 +1,56 @@
+@import "fonts/pangur";
+
+body {
+	font-family: proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.gradient-background {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(30deg, #3C9E99, #445C9A );
+	z-index: -10;
+}
+
+.container-fluid {
+	max-width: 1120px;
+	padding: 50px 80px 100px 80px;
+}
+
+.white-font {
+	color: #ffffff;
+	opacity: 0.5;
+}
+
+
+.designer-info {
+	float: left;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	.name {
+		font-weight: bold;
+		font-size: 22px;
+		letter-spacing: 2px;
+		.white-font;
+	}
+	.position {
+		font-weight: lighter;
+		position: relative;
+		top: -4px;
+		font-style: italic;
+		font-size: 14px;
+		opacity: 0.8;
+	}
+}
+
+.designer-refs {
+	padding-top: 4px;
+	float: right;
+	span {
+		font-size: 42px;
+		float: right;
+		.white-font
+	}
+}
