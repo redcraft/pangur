@@ -5,7 +5,7 @@ body {
 }
 
 #default-background, #about-background, #portfolio-background, #contact-background {
-	position: absolute;
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	opacity: 0;
@@ -30,9 +30,12 @@ body {
 	background: linear-gradient(30deg, #68B9DC, #445C9A );
 }
 
+@page-width: 1120px;
+@side-padding: 80px;
+
 .container-fluid {
-	max-width: 1120px;
-	padding: 50px 80px 100px 80px;
+	max-width: @page-width;
+	padding: 50px @side-padding 100px @side-padding;
 }
 
 .white-font {
@@ -48,6 +51,11 @@ body {
 	}
 }
 
+header {
+	position: relative;
+	top: 0;
+	transition: top .5s ease-out;
+}
 
 .designer-info {
 	float: left;
@@ -100,13 +108,17 @@ h1 {
 	.helper {
 		width: @icon-size * 6;
 		margin: 0 auto 0 auto;
+
+		span {
+			cursor: pointer;
+		}
 	}
 }
 
 .page-link {
 	text-align: center;
 	float: left;
-	padding: 0 (@icon-size / 2) 0 (@icon-size / 2);
+	margin: 0 (@icon-size / 2) 0 (@icon-size / 2);
 	.white-font-link;
 
 	.icon {
@@ -118,3 +130,37 @@ h1 {
 	}
 }
 
+.header-rise {
+	top: -45px;
+}
+
+aside {
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	background: linear-gradient(30deg, #F3F3F3, #F5F5F5 );
+
+	article {
+		max-width: @page-width;
+		margin: 0 auto 0 auto;
+		padding: 40px @side-padding 0 @side-padding;
+
+		.back-button {
+			float: right;
+
+			span {
+				font-size: 35px;
+				color: #888888;
+				opacity: 0.5;
+				transition:opacity .2s ease-out;
+				cursor: pointer;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

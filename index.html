@@ -11,6 +11,7 @@
     <script src="bower_components/less/dist/less.js"></script>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="app.js"></script>
 
@@ -47,24 +48,44 @@
             <a href="http://ru.linkedin.com/in/redcraft"><span class="pangur-linkedin"></span></a>
         </div>
     </header>
-    <h1 style="clear: both">Search-focused UX-designer <br>
-        which keeps things simple</h1>
-    <div class="footer">
-        <div class="helper">
-            <div id="about" class="page-link">
-                <span class="pangur-about icon"></span><br>
-                <span class="title">About</span>
-            </div>
-            <div id="portfolio" class="page-link">
-                <span class="pangur-portfolio icon"></span><br>
-                <span class="title">Portfolio</span>
-            </div>
-            <div id="contact" class="page-link">
-                <span class="pangur-contact icon"></span><br>
-                <span class="title">Contact</span>
+    <section>
+        <h1 style="clear: both">Search-focused UX-designer <br>
+            which keeps things simple</h1>
+        <div class="footer">
+            <div class="helper">
+                <div id="about-button" class="page-link">
+                    <span class="pangur-about icon"></span><br>
+                    <span class="title">About</span>
+                </div>
+                <div id="portfolio-button" class="page-link">
+                    <span class="pangur-portfolio icon"></span><br>
+                    <span class="title">Portfolio</span>
+                </div>
+                <div id="contact-button" class="page-link">
+                    <span class="pangur-contact icon"></span><br>
+                    <span class="title">Contact</span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <aside id="about-page">
+        <article >
+            <div class="back-button"><span class="pangur-thin-arrow-down"></span></div>
+            About
+        </article>
+    </aside>
+    <aside id="portfolio-page">
+        <article >
+            <div class="back-button"><span class="pangur-thin-arrow-down"></span></div>
+            Portfolio
+        </article>
+    </aside>
+    <aside id="contact-page">
+        <article >
+            <div class="back-button"><span class="pangur-thin-arrow-down"></span></div>
+            Contact
+        </article>
+    </aside>
 </div>
 </body>
 </html>
