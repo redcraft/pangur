@@ -4,12 +4,30 @@ body {
 	font-family: proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.gradient-background {
+#default-background, #about-background, #portfolio-background, #contact-background {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
+	opacity: 0;
+	z-index: -5;
+}
+
+#default-background {
 	background: linear-gradient(30deg, #3C9E99, #445C9A );
+	opacity: 1;
 	z-index: -10;
+}
+
+#about-background {
+	background: linear-gradient(30deg, #63D66E, #445C9A );
+}
+
+#portfolio-background {
+	background: linear-gradient(30deg, #9B7ABA, #445C9A );
+}
+
+#contact-background {
+	background: linear-gradient(30deg, #68B9DC, #445C9A );
 }
 
 .container-fluid {
@@ -20,6 +38,14 @@ body {
 .white-font {
 	color: #ffffff;
 	opacity: 0.5;
+}
+
+.white-font-link {
+	.white-font;
+	transition:opacity .2s ease-out;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 
@@ -51,7 +77,7 @@ body {
 	span {
 		font-size: 42px;
 		float: right;
-		.white-font
+		.white-font-link;
 	}
 }
 
@@ -59,7 +85,7 @@ h1 {
 	margin-top: 35vh;
 	font-weight: lighter;
 	text-align: center;
-	.white-font
+	.white-font;
 }
 
 @icon-size: 72px;
@@ -68,7 +94,7 @@ h1 {
 
 	position: absolute;
 	bottom: 100px;
-	left: 0px;
+	left: 0;
 	width: 100%;
 
 	.helper {
@@ -81,7 +107,7 @@ h1 {
 	text-align: center;
 	float: left;
 	padding: 0 (@icon-size / 2) 0 (@icon-size / 2);
-	.white-font;
+	.white-font-link;
 
 	.icon {
 		font-size: @icon-size;
@@ -91,3 +117,4 @@ h1 {
 		font-weight: lighter;
 	}
 }
+

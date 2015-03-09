@@ -12,6 +12,7 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="app.js"></script>
 
     <script src="//use.typekit.net/zyk2daa.js"></script>
     <script>try {
@@ -21,7 +22,11 @@
 
 </head>
 <body>
-<div class="gradient-background"></div>
+
+<div id="about-background"></div>
+<div id="portfolio-background"></div>
+<div id="contact-background"></div>
+<div id="default-background"></div>
 <div class="container-fluid">
     <header>
         <div class="designer-info">
@@ -46,15 +51,15 @@
         which keeps things simple</h1>
     <div class="footer">
         <div class="helper">
-            <div class="page-link">
+            <div id="about" class="page-link">
                 <span class="pangur-about icon"></span><br>
                 <span class="title">About</span>
             </div>
-            <div class="page-link">
+            <div id="portfolio" class="page-link">
                 <span class="pangur-portfolio icon"></span><br>
                 <span class="title">Portfolio</span>
             </div>
-            <div class="page-link">
+            <div id="contact" class="page-link">
                 <span class="pangur-contact icon"></span><br>
                 <span class="title">Contact</span>
             </div>
