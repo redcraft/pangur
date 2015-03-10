@@ -67,6 +67,7 @@ header {
 		font-weight: bold;
 		font-size: 22px;
 		letter-spacing: 2px;
+		text-transform: uppercase;
 		.white-font;
 	}
 	.position {
@@ -89,10 +90,11 @@ header {
 	}
 }
 
-h1 {
+.main-page-intro {
 	margin-top: 35vh;
 	font-weight: lighter;
 	text-align: center;
+	clear: both;
 	.white-font;
 }
 
@@ -137,16 +139,18 @@ h1 {
 aside {
 	position: fixed;
 	top: 60px;
-	bottom: 0;
+//	bottom: 0;
 	left: 0;
 	width: 100%;
 	display: none;
+	overflow-y: scroll;
+	height: 100%;
 	background: linear-gradient(30deg, #F3F3F3, #F5F5F5 );
 
 	article {
-		max-width: @page-width;
+		max-width: 800px;
 		margin: 0 auto 0 auto;
-		padding: 40px @side-padding 0 @side-padding;
+		padding: 40px 0 100px 0;
 
 		.back-button {
 			float: right;
@@ -162,5 +166,49 @@ aside {
 				}
 			}
 		}
+
+		h1 {
+			font-size: 39px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+			color: #888888;
+			font-size: 24px;
+			font-weight: lighter;
+			margin-bottom: 25px;
+		}
+		p {
+			font-size: 18px;
+			padding-left: 15px;
+		}
 	}
 }
+
+@profile-image-size: 200px;
+
+.profile-image {
+	width: @profile-image-size;
+	height: @profile-image-size;
+	margin: 0 auto 50px auto;
+
+	img {
+		width: @profile-image-size;
+		height: @profile-image-size;
+	}
+}
+
+#about-page {
+	h1 {
+		color: #4c858c;
+	}
+}
+
+.quote {
+	font-style: italic;
+	border-left: solid #888888;
+}
+
