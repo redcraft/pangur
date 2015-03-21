@@ -27,4 +27,15 @@ $(document).ready(function(){
     setEvents("about");
     setEvents("portfolio");
     setEvents("contact");
+
+    $('.osx-window').osxWindow();
+
+    $('#portfolio-page').find("article").each(function() {
+        var unslider = $(this).find(".banner").unslider({dots: true, autoplay: false});
+        $(this).find(".slide-button").click(function() {
+            var fn = this.className.split(' ')[1];
+            unslider.data('unslider')[fn]();
+        });
+    });
+
 });
