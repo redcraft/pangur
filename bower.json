@@ -1,0 +1,25 @@
+{
+  "name": "pangur",
+  "version": "1.0.0",
+  "homepage": "https://github.com/redcraft/pangur",
+  "description": "UX-Designer Portfolio",
+  "main": "pangur.js",
+  "authors": [
+    "Maxim Gurkin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "unslider": "~1.0.0",
+    "osx-window": "~1.0.1",
+    "jquery-ui": "~1.11.4",
+    "less": "~2.5.0",
+    "bootstrap": "~3.3.4"
+  }
+}
