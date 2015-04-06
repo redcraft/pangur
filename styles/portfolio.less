@@ -1,0 +1,90 @@
+#portfolio {
+	h1 {
+		color: #5f66a5;
+	}
+}
+
+
+@slider-height: 555px;
+.banner {
+	height: @slider-height;
+	overflow: auto;
+	margin: 50px 0 30px 0;
+
+	li {
+		list-style: none;
+		width: 802px;
+		height: @slider-height;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			float: left;
+		}
+	}
+
+	.dots {
+		position: relative;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+		padding-left: 335px;
+
+		li {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			margin: 0 4px;
+
+			text-indent: -999em;
+
+			border: 1px solid @grey-color;
+			border-radius: 50%;
+
+			cursor: pointer;
+			opacity: .4;
+
+			transition: background .5s, opacity .5s;
+
+			&.active {
+				background: #bababa;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+.slide-button {
+	font-size: 36px;
+	position: relative;
+	bottom: 340px;
+	.grey-button;
+}
+
+.prev {
+	.slide-button;
+	float: left;
+	left: -70px;
+}
+
+.next {
+	.slide-button;
+	float: right;
+	right: -70px;
+}
+
+.ipad-article {
+	.banner {
+		ul {
+			li {
+				height: 645px;
+			}
+		}
+	}
+	.slide-button {
+		bottom: 400px;
+	}
+}

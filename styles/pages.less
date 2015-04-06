@@ -1,0 +1,51 @@
+aside {
+	position: fixed;
+	top: 60px;
+	//	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	overflow-y: scroll;
+	height: 100%;
+	background: linear-gradient(30deg, #F3F3F3, #F5F5F5 );
+	padding-bottom: 60px;
+
+	hr {
+		border-top: 1px solid #d6d6d6;
+	}
+
+	article {
+		max-width: 800px;
+		margin: 0 auto 0 auto;
+		padding-top: 40px;
+		padding-bottom: 10px;
+
+		.back-button {
+			float: right;
+			.grey-button;
+
+			span {
+				font-size: 35px;
+			}
+		}
+
+		h1 {
+			font-size: 39px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+			color: @grey-color;
+			font-size: 24px;
+			font-weight: lighter;
+			margin-bottom: 25px;
+		}
+		p {
+			font-size: 18px;
+			padding-left: 15px;
+		}
+	}
+}
