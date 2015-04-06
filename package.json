@@ -1,0 +1,22 @@
+{
+  "name": "pangur",
+  "version": "1.0.0",
+  "description": "UX-Designer Portfolio",
+  "main": "pangur.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redcraft/pangur.git"
+  },
+  "author": "Maxim Gurkin <redmax3d@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redcraft/pangur/issues"
+  },
+  "homepage": "https://github.com/redcraft/pangur",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
