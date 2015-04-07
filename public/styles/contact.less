@@ -6,7 +6,7 @@
 		max-width: 600px;
 		margin: 0 auto 0 auto;
 
-		div {
+		#form-submit {
 			font-size: 64px;
 			color: @grey-color;
 			float: right;
@@ -16,6 +16,14 @@
 				background-color: #ffffff;
 				border-radius: 50%;
 			}
+		}
+		#form-success {
+			float: left;
+			padding-top: 20px;
+			font-size: 18px;
+			color: green;
+			opacity: 0;
+			transition:opacity .1s ease-out;
 		}
 	}
 	input {
