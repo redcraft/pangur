@@ -5,8 +5,6 @@ var email = require('emailjs');
 var config = require('./config.json');
 
 app.use(['/about', '/contact', '/portfolio/inforbix-web', '/portfolio/inforbix-ipad', '/portfolio/a360', '/portfolio', '/'],  express.static(__dirname + '/public'));
-app.use("/img", express.static(__dirname + '/img'));
-app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/bower_components", express.static(__dirname + '/bower_components'));
 
 app.use( bodyParser.json() );
