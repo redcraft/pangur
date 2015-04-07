@@ -56,14 +56,25 @@ module.exports = function(grunt) {
 					], dest: 'dist/public/'}
 				]
 			}
+		},
+		compress: {
+			main: {
+				options: {
+					archive: 'distribution.tgz'
+				},
+				files: [
+					{expand: true, cwd: 'dist/', src: ['**'], dest: 'pangur/'}
+				]
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-processhtml');
 
-	grunt.registerTask('default', ['uglify', 'processhtml', 'less', 'copy']);
+	grunt.registerTask('default', ['uglify', 'processhtml', 'less', 'copy', 'compress']);
 
 };
