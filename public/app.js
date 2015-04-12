@@ -168,16 +168,6 @@ $(document).ready(function(){
 
     $('.osx-window').osxWindow();
 
-    $('#form-submit').click(function() {
-        $('#contact-form').ajaxSubmit(function() {
-            $("input, textarea").val("");
-            $('#form-success').css('opacity', 1);
-			setTimeout(function() {
-				$('#form-success').css('opacity', 0);
-			}, 3000);
-        });
-    });
-
     setTimeout(function() {
         $('#portfolio').find("article").each(function() {
             var unslider = $(this).find(".banner").unslider({dots: true, autoplay: false});
@@ -193,9 +183,35 @@ $(document).ready(function(){
         pageController.restorePages(window.location.pathname);
     }, 500);
 
+	$('#form-submit').click(function() {
+		$('#contact-form').submit();
+	});
 
-
-
+	$("#contact-form").validate({
+		rules: {
+			"form-email": {
+				required: true,
+				email: true
+			},
+			"form-name": {
+				required: true
+			},
+			"form-message": {
+				required: true
+			}
+		},
+		submitHandler: function() {
+			$.post('/api/messages',
+				$('#contact-form').serialize() ,
+				function(data){
+					$("input, textarea").val("");
+					$('#form-success').css('opacity', 1);
+					setTimeout(function() {
+						$('#form-success').css('opacity', 0);
+					}, 3000);
+				}, "json");
+		}
+	});
 
 
 });

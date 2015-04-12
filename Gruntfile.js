@@ -27,6 +27,8 @@ module.exports = function(grunt) {
 					"bower_components/osx-window/osx-window.js",
 					"bower_components/unslider/src/unslider.js",
 					"bower_components/jquery-form/jquery.form.js",
+					"bower_components/jquery-validation/dist/jquery.validate.js",
+					"bower_components/jquery-validation/dist/additional-methods.js",
 					"public/app.js"
 				],
 				dest: 'dist/public/app.min.js'

@@ -20,7 +20,8 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower_components/osx-window/osx-window.js"></script>
     <script src="/bower_components/unslider/src/unslider.js"></script>
-    <script src="/bower_components/jquery-form/jquery.form.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/bower_components/jquery-validation/dist/additional-methods.js"></script>
     <script src="app.js"></script>
     <!-- /build -->
 
@@ -331,10 +332,10 @@
             <h2>If you have any question, interesting project for discussion or<br>
                 you would like to hire me, plese use the form below
             </h2>
-            <form id="contact-form" class="form-horizontal" action="/api/messages" method="post">
-                <input name="email" type="email" placeholder="Email Address">
-                <input name="name" type="text" placeholder="Name">
-                <textarea name="message" placeholder="Message"></textarea>
+            <form id="contact-form" class="form-horizontal">
+                <input type="email" class="form-control" id="form-email" placeholder="Email" name="email" required>
+                <input type="text" class="form-control" id="form-name" placeholder="Name" name="name" required>
+                <textarea class="form-control" rows="2" placeholder="Message" id="form-message" name="message" required ></textarea>
                 <div id="form-success">Thanks for your email!</div>
                 <div id="form-submit"><span class="pangur-send"></span></div>
             </form>

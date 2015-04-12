@@ -19,6 +19,7 @@ var server  = email.server.connect({
 });
 
 app.post('/api/messages', function(req, res) {
+	console.log(req.body);
     var author = req.body.name+ " <" + req.body.email + ">";
     server.send({
         text:    req.body.message,

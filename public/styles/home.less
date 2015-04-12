@@ -60,8 +60,15 @@ header {
 	}
 }
 
+@media screen and (max-height: 400px){
+	.intro-container {
+		display: none;
+	}
+}
+
 .intro-container{
 	position: absolute;
+	min-width: @min-width;
 	top: 45%;
 	margin-top: -50px;/* half of #content height*/
 	left: 0;
@@ -79,6 +86,7 @@ header {
 
 .footer {
 
+	min-width: @min-width;
 	position: absolute;
 	bottom: 100px;
 	left: 0;
