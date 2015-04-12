@@ -162,8 +162,10 @@ $(document).ready(function(){
         pageController.hideAll();
     });
 
-    window.onpopstate = function() {
-        pageController.restorePages(window.location.pathname);
+    window.onpopstate = function(event) {
+       if(event.state != null) {
+		   pageController.restorePages(window.location.pathname);
+	   }
     };
 
     $('.osx-window').osxWindow();
