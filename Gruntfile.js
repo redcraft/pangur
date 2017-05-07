@@ -47,25 +47,13 @@ module.exports = function(grunt) {
 					{expand: true, src: [
 						'public/img/**',
 						'public/fonts/*',
-						'node_modules/express/**',
-						'node_modules/emailjs/**',
-						'node_modules/body-parser/**',
-						'config.json',
-						'pangur.js'
+						'node_modules/**',
+                        'package.json',
+						'server.js'
 					], dest: 'dist/'},
 					{expand: true, flatten: true, src: [
 						'bower_components/bootstrap/dist/css/bootstrap.min.css'
 					], dest: 'dist/public/'}
-				]
-			}
-		},
-		compress: {
-			main: {
-				options: {
-					archive: 'distribution.tgz'
-				},
-				files: [
-					{expand: true, cwd: 'dist/', src: ['**'], dest: 'pangur/'}
 				]
 			}
 		}
@@ -77,6 +65,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-processhtml');
 
-	grunt.registerTask('default', ['uglify', 'processhtml', 'less', 'copy', 'compress']);
+	grunt.registerTask('default', ['uglify', 'processhtml', 'less', 'copy']);
 
 };
